@@ -1,0 +1,409 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+  background-color: #ffffff;
+}
+
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  background-color: #ffffff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(168, 168, 168, 0.651);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-blanco-perla {
+  background-color: #ffffffdc;
+}
+
+.max-height-sidebar {
+  /* max-height: 60rem; */
+  max-height: 44.2rem;
+  overflow: auto;
+}
+
+.max-height-sidebar::-webkit-scrollbar {
+  width: 3px;
+  background-color: #ffffff;
+}
+
+.max-height-sidebar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  background-color: #ffffff;
+}
+
+.max-height-sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(168, 168, 168, 0.651);
+}
+
+.notis::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 208, 0);
+}
+
+.notis::-webkit-scrollbar {
+  width: 3px;
+  background-color: #ffffff;
+}
+
+.notis::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  background-color: #ffffff;
+}
+
+.d3 {
+  box-shadow: 0px 5px 0px 0px rgb(0, 89, 172);
+}
+
+.cursor-crosshair {
+  cursor: crosshair;
+}
+
+.border-top-color-fila {
+  border-top: 2px solid black;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.mr-0-imp {
+  margin-right: 0 !important;
+}
+.ml-0-imp {
+  margin-left: 0 !important;
+}
+
+.no-border-select .css-yk16xz-control {
+  border: none !important;
+}
+
+.no-border-select .css-1pahdxg-control {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.daterangepicker:before,
+.daterangepicker:after {
+  content: none !important;
+}
+
+.vertical-middle {
+  vertical-align: -webkit-baseline-middle;
+}
+
+.daterangepicker.ltr.show-calendar.opensright {
+  border: 2px solid rgb(59, 130, 246);
+  margin-right: 1em;
+}
+
+.applyBtn.btn.btn-sm.btn-primary {
+  color: rgb(37, 99, 235) !important;
+  text-transform: uppercase;
+  font-weight: bold !important;
+}
+
+.cancelBtn.btn.btn-sm.btn-default {
+  color: rgb(239, 68, 68) !important;
+  text-transform: uppercase;
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 250px;
+  height: 20px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.progress-verde progress[value]::-webkit-progress-value {
+  background-color: rgb(16, 185, 129) !important;
+  border-radius: 5px;
+}
+
+.progress-amarillo progress[value]::-webkit-progress-value {
+  background-color: rgb(251, 191, 36) !important;
+  border-radius: 5px;
+}
+
+.progress-rojo progress[value]::-webkit-progress-value {
+  background-color: rgb(239, 68, 68) !important;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1700px) {
+  .width-sidebar {
+    width: 14% !important;
+  }
+}
+.h-full-screen {
+  height: 90vh;
+}
+.divEstatico {
+  display: absolute;
+}
+.divPermanente {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.63);
+  border-radius: 1rem;
+  height: 100%;
+  display: inline-table;
+  visibility: hidden;
+}
+
+.divEstatico:hover .divPermanente {
+  padding-right: 1.5rem;
+  visibility: visible;
+}
+
+.w-096 {
+  width: 96%;
+}
+.width-sidebar {
+  width: 17%;
+}
+.w-335px {
+  width: 335px;
+}
+.pl-77-porc {
+  padding-left: 77%;
+}
+.bg-blue-logo {
+  background-color: #1a439c;
+}
+
+.inherit {
+  display: inherit;
+}
+.h-468px {
+  height: 468px;
+}
+.unsetImportant {
+  display: unset !important;
+}
+
+.max-height-90 {
+  max-height: 90%;
+}
+
+.w-850 {
+  width: 850px;
+}
+.textVin {
+  font-size: 10px !important;
+}
+.fontSize {
+  font-size: 7.7px;
+}
+
+/*Tree inspections*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before,
+.tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid rgb(0, 0, 0);
+  width: 50%;
+  height: 20px;
+}
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid rgb(0, 0, 0);
+}
+
+/*We need to remove left-right connectors from elements without 
+  any siblings*/
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child {
+  padding-top: 0;
+}
+
+/*Remove left connector from first child and 
+  right connector from last child*/
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before {
+  border-right: 1px solid rgb(0, 0, 0);
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid rgb(0, 0, 0);
+  width: 0;
+  height: 20px;
+}
+
+.tree li a {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #666;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+  display: inline-block;
+
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover,
+.tree li a:hover + ul li a {
+  background: #c8e4f8;
+  color: #000;
+  border: 1px solid #94a0b4;
+  cursor: pointer;
+}
+/*Connector styles on hover*/
+.tree li a:hover + ul li::after,
+.tree li a:hover + ul li::before,
+.tree li a:hover + ul::before,
+.tree li a:hover + ul ul::before {
+  border-color: #94a0b4;
+}
+
+/*Thats all. I hope you enjoyed it.
+  Thanks :)*/
+
+.nodeActive {
+  background-color: #1a439c !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+/* Works on Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #1a439c white;
+  border-radius: 20px;
+}
+#sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #1a439c white;
+  border-radius: 20px;
+}
+
+#sidebar::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+#sidebar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  background-color: #1a439c;
+  border-radius: 20px;
+  outline: white;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1a439c;
+  border-radius: 20px;
+  outline: white;
+}
